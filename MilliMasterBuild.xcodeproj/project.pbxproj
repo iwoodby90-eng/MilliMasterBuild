@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {
+  };
+  objectVersion = 56;
+  objects = {
+
+    /* Begin PBXBuildFile section */
+    49E287651DC3FB0A /* MilliColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2765180DA9F43BE; };
+    C74825A1DEF09B63 /* MilliCenterMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B40F83ECA6129D5; };
+    794368DB52CF1E0A /* MilliNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8A2CF1037E496D; };
+    5AF124B7DC09863E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5384DEBC6217AF90; };
+    BEF49581072AC36D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E3A6B0CD4872F195; };
+    0195AC48D37BF62E /* MilliMasterBuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569E72FC8D1A3B0; };
+    C17A9F08B63542DE /* MilliMasterBuildUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40893C51BF7DA26E; };
+    1DE0B526F7C39A48 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0348ADBEF961C275; };
+    /* End PBXBuildFile section */
+
+    /* Begin PBXFileReference section */
+    BFA017238659ED4C /* MilliMasterBuild.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MilliMasterBuild.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+    C2765180DA9F43BE /* MilliColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliColors.swift"; sourceTree = "<group>"; };
+    7B40F83ECA6129D5 /* MilliCenterMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliCenterMButton.swift"; sourceTree = "<group>"; };
+    5B8A2CF1037E496D /* MilliNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliNavBar.swift"; sourceTree = "<group>"; };
+    5384DEBC6217AF90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+    E3A6B0CD4872F195 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text.markdown; path = "README.md"; sourceTree = "<group>"; };
+    4569E72FC8D1A3B0 /* MilliMasterBuildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliMasterBuildTests.swift"; sourceTree = "<group>"; };
+    40893C51BF7DA26E /* MilliMasterBuildUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliMasterBuildUITests.swift"; sourceTree = "<group>"; };
+    051FE28AB36D794C /* MilliMasterBuildTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilliMasterBuildTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+    27CF1950384BDA6E /* MilliMasterBuildUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilliMasterBuildUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+    0348ADBEF961C275 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+    /* End PBXFileReference section */
+
+    /* Begin PBXFrameworksBuildPhase section */
+    6BA017523C49DFE8 /* Frameworks */ = {
+      isa = PBXFrameworksBuildPhase;
+      buildActionMask = 2147483647;
+      files = (
+        1DE0B526F7C39A48 /* SwiftUI.framework in Frameworks */
+      );
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+    03BF487E19D5C2A6 /* Frameworks */ = {
+      isa = PBXFrameworksBuildPhase;
+      buildActionMask = 2147483647;
+      files = (
+      );
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+    65BCA4E39F27108D /* Frameworks */ = {
+      isa = PBXFrameworksBuildPhase;
+      buildActionMask = 2147483647;
+      files = (
+      );
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+    /* End PBXFrameworksBuildPhase section */
+
+    /* Begin PBXGroup section */
+    7A3640F1E2B58D9C /* Main Group */ = {
+      isa = PBXGroup;
+      children = (
+        76EA3D914205F8CB /* MilliMasterBuild */,
+        8D523B71469A0CFE /* MilliMasterBuildTests */,
+        6FEB0891D2A43C57 /* MilliMasterBuildUITests */,
+        13A56F80CE24B97D /* Products */
+      );
+      sourceTree = "<group>";
+    };
+    76EA3D914205F8CB /* MilliMasterBuild */ = {
+      isa = PBXGroup;
+      children = (
+        39821F40ABC56E7D,
+        E3A6B0CD4872F195
+      );
+      path = "MilliMasterBuild";
+      sourceTree = "<group>";
+    };
+    
+    39821F40ABC56E7D /* Milli */ = {
+      isa = PBXGroup;
+      children = (
+        614A520EB873F9DC,
+        769143F0E2DC85AB,
+        30A5F41269EB8DC7,
+        5384DEBC6217AF90
+      );
+      path = "Milli";
+      sourceTree = "<group>";
+    };
+    614A520EB873F9DC /* DesignSystem */ = {
+      isa = PBXGroup;
+      children = (
+        C2765180DA9F43BE
+      );
+      path = "DesignSystem";
+      sourceTree = "<group>";
+    };
+    769143F0E2DC85AB /* Components */ = {
+      isa = PBXGroup;
+      children = (
+        7B40F83ECA6129D5
+      );
+      path = "Components";
+      sourceTree = "<group>";
+    };
+    30A5F41269EB8DC7 /* Navigation */ = {
+      isa = PBXGroup;
+      children = (
+        5B8A2CF1037E496D
+      );
+      path = "Navigation";
+      sourceTree = "<group>";
+    };
+    8D523B71469A0CFE /* MilliMasterBuildTests */ = {
+      isa = PBXGroup;
+      children = (
+        4569E72FC8D1A3B0 /* MilliMasterBuildTests.swift */
+      );
+      path = "MilliMasterBuildTests";
+      sourceTree = "<group>";
+    };
+    6FEB0891D2A43C57 /* MilliMasterBuildUITests */ = {
+      isa = PBXGroup;
+      children = (
+        40893C51BF7DA26E /* MilliMasterBuildUITests.swift */
+      );
+      path = "MilliMasterBuildUITests";
+      sourceTree = "<group>";
+    };
+    13A56F80CE24B97D /* Products */ = {
+      isa = PBXGroup;
+      children = (
+        BFA017238659ED4C /* MilliMasterBuild.app */,
+        051FE28AB36D794C /* MilliMasterBuildTests.xctest */,
+        27CF1950384BDA6E /* MilliMasterBuildUITests.xctest */
+      );
+      name = Products;
+      sourceTree = "<group>";
+    };
+    /* End PBXGroup section */
+
+    /* Begin PBXNativeTarget section */
+    01EBFA2384DC6795 /* MilliMasterBuild */ = {
+      isa = PBXNativeTarget;
+      buildConfigurationList = AF9C86D34E52B710 /* Build configuration list for PBXNativeTarget "MilliMasterBuild" */;
+      buildPhases = (
+        ECD93A605FB12748 /* Sources */,
+        6BA017523C49DFE8 /* Frameworks */
+      );
+      buildRules = (
+      );
+      dependencies = (
+      );
+      name = "MilliMasterBuild";
+      productName = "MilliMasterBuild";
+      productReference = BFA017238659ED4C /* MilliMasterBuild.app */;
+      productType = "com.apple.product-type.application";
+    };
+    68237B5FC1D04EA9 /* MilliMasterBuildTests */ = {
+      isa = PBXNativeTarget;
+      buildConfigurationList = 0E12FDB53C46987A /* Build configuration list for PBXNativeTarget "MilliMasterBuildTests" */;
+      buildPhases = (
+        370D49CFB1E26A58 /* Sources */,
+        03BF487E19D5C2A6 /* Frameworks */
+      );
+      buildRules = (
+      );
+      dependencies = (
+        D5A2769BC1304E8F /* PBXTargetDependency */
+      );
+      name = "MilliMasterBuildTests";
+      productName = "MilliMasterBuildTests";
+      productReference = 051FE28AB36D794C /* MilliMasterBuildTests.xctest */;
+      productType = "com.apple.product-type.bundle.unit-test";
+    };
+    87C9A40B12FE356D /* MilliMasterBuildUITests */ = {
+      isa = PBXNativeTarget;
+      buildConfigurationList = 05F1D427839A6BCE /* Build configuration list for PBXNativeTarget "MilliMasterBuildUITests" */;
+      buildPhases = (
+        F976834EBC21A50D /* Sources */,
+        65BCA4E39F27108D /* Frameworks */
+      );
+      buildRules = (
+      );
+      dependencies = (
+        754D9FA6832CBE10 /* PBXTargetDependency */
+      );
+      name = "MilliMasterBuildUITests";
+      productName = "MilliMasterBuildUITests";
+      productReference = 27CF1950384BDA6E /* MilliMasterBuildUITests.xctest */;
+      productType = "com.apple.product-type.bundle.ui-testing";
+    };
+    /* End PBXNativeTarget section */
+
+    /* Begin PBXProject section */
+    623FBC7DE8A19504 /* Project object */ = {
+      isa = PBXProject;
+      attributes = {
+        LastSwiftUpdateCheck = 1500;
+        LastUpgradeCheck = 1500;
+        TargetAttributes = {
+          01EBFA2384DC6795 = {
+            CreatedOnToolsVersion = 15.0;
+          };
+          68237B5FC1D04EA9 = {
+            CreatedOnToolsVersion = 15.0;
+            TestTargetID = 01EBFA2384DC6795;
+          };
+          87C9A40B12FE356D = {
+            CreatedOnToolsVersion = 15.0;
+            TestTargetID = 01EBFA2384DC6795;
+          };
+        };
+      };
+      buildConfigurationList = 71439850D2B6CFEA /* Build configuration list for PBXProject "MilliMasterBuild" */;
+      compatibilityVersion = "Xcode 14.0";
+      developmentRegion = en;
+      hasScannedForEncodings = 0;
+      knownRegions = (
+        en,
+        Base
+      );
+      mainGroup = 7A3640F1E2B58D9C;
+      productRefGroup = 13A56F80CE24B97D /* Products */;
+      projectDirPath = "";
+      projectRoot = "";
+      targets = (
+        01EBFA2384DC6795 /* MilliMasterBuild */,
+        68237B5FC1D04EA9 /* MilliMasterBuildTests */,
+        87C9A40B12FE356D /* MilliMasterBuildUITests */
+      );
+    };
+    /* End PBXProject section */
+
+    /* Begin PBXSourcesBuildPhase section */
+    ECD93A605FB12748 /* Sources */ = {
+      isa = PBXSourcesBuildPhase;
+      buildActionMask = 2147483647;
+      files = (
+        49E287651DC3FB0A,
+        C74825A1DEF09B63,
+        794368DB52CF1E0A,
+        5AF124B7DC09863E,
+        BEF49581072AC36D
+      );
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+    370D49CFB1E26A58 /* Sources */ = {
+      isa = PBXSourcesBuildPhase;
+      buildActionMask = 2147483647;
+      files = (
+        0195AC48D37BF62E /* MilliMasterBuildTests.swift in Sources */
+      );
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+    F976834EBC21A50D /* Sources */ = {
+      isa = PBXSourcesBuildPhase;
+      buildActionMask = 2147483647;
+      files = (
+        C17A9F08B63542DE /* MilliMasterBuildUITests.swift in Sources */
+      );
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+    /* End PBXSourcesBuildPhase section */
+
+    /* Begin PBXContainerItemProxy section */
+    0D6891EF7532CA4B /* PBXContainerItemProxy */ = {
+      isa = PBXContainerItemProxy;
+      containerPortal = 623FBC7DE8A19504 /* Project object */;
+      proxyType = 1;
+      remoteGlobalIDString = 01EBFA2384DC6795;
+      remoteInfo = "MilliMasterBuild";
+    };
+    D5701C38A2B94EF6 /* PBXContainerItemProxy */ = {
+      isa = PBXContainerItemProxy;
+      containerPortal = 623FBC7DE8A19504 /* Project object */;
+      proxyType = 1;
+      remoteGlobalIDString = 01EBFA2384DC6795;
+      remoteInfo = "MilliMasterBuild";
+    };
+    /* End PBXContainerItemProxy section */
+
+    /* Begin PBXTargetDependency section */
+    D5A2769BC1304E8F /* PBXTargetDependency */ = {
+      isa = PBXTargetDependency;
+      target = 01EBFA2384DC6795 /* MilliMasterBuild */;
+      targetProxy = 0D6891EF7532CA4B /* PBXContainerItemProxy */;
+    };
+    754D9FA6832CBE10 /* PBXTargetDependency */ = {
+      isa = PBXTargetDependency;
+      target = 01EBFA2384DC6795 /* MilliMasterBuild */;
+      targetProxy = D5701C38A2B94EF6 /* PBXContainerItemProxy */;
+    };
+    /* End PBXTargetDependency section */
+
+    /* Begin XCBuildConfiguration section */
+    E0F2A98DBC567413 /* Debug */ = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        ALWAYS_SEARCH_USER_PATHS = NO;
+        ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+        CLANG_ANALYZER_NONNULL = YES;
+        CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+        CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+        CLANG_ENABLE_MODULES = YES;
+        CLANG_ENABLE_OBJC_ARC = YES;
+        CLANG_ENABLE_OBJC_WEAK = YES;
+        CODE_SIGN_STYLE = Automatic;
+        CURRENT_PROJECT_VERSION = 1;
+        DEVELOPMENT_ASSET_PATHS = "";
+        DEVELOPMENT_TEAM = "";
+        ENABLE_PREVIEWS = YES;
+        ENABLE_STRICT_OBJC_MSGSEND = YES;
+        ENABLE_TESTABILITY = YES;
+        FRAMEWORK_SEARCH_PATHS = (
+          "$(inherited)",
+          "$(SDKROOT)/System/Library/Frameworks"
+        );
+        GCC_C_LANGUAGE_STANDARD = gnu11;
+        GCC_DYNAMIC_NO_PIC = NO;
+        GCC_NO_COMMON_BLOCKS = YES;
+        GCC_OPTIMIZATION_LEVEL = 0;
+        GCC_PREPROCESSOR_DEFINITIONS = (
+          "DEBUG=1",
+          "$(inherited)",
+        );
+        GENERATE_INFOPLIST_FILE = YES;
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+        INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+        IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+        LD_RUNPATH_SEARCH_PATHS = (
+          "$(inherited)",
+          "@executable_path/Frameworks",
+        );
+        MARKETING_VERSION = 1.0;
+        MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+        MTL_FAST_MATH = YES;
+        ONLY_ACTIVE_ARCH = YES;
+        PRODUCT_BUNDLE_IDENTIFIER = "com.example.millimasterbuild";
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SDKROOT = iphoneos;
+        SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+        SUPPORTS_MACCATALYST = NO;
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+        SWIFT_EMIT_LOC_STRINGS = YES;
+        SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+      };
+      name = Debug;
+    };
+    EB3C8ADF67524910 /* Release */ = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        ALWAYS_SEARCH_USER_PATHS = NO;
+        ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+        CLANG_ANALYZER_NONNULL = YES;
+        CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+        CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+        CLANG_ENABLE_MODULES = YES;
+        CLANG_ENABLE_OBJC_ARC = YES;
+        CLANG_ENABLE_OBJC_WEAK = YES;
+        CODE_SIGN_STYLE = Automatic;
+        COPY_PHASE_STRIP = NO;
+        CURRENT_PROJECT_VERSION = 1;
+        DEVELOPMENT_ASSET_PATHS = "";
+        DEVELOPMENT_TEAM = "";
+        ENABLE_NS_ASSERTIONS = NO;
+        ENABLE_PREVIEWS = YES;
+        ENABLE_STRICT_OBJC_MSGSEND = YES;
+        FRAMEWORK_SEARCH_PATHS = (
+          "$(inherited)",
+          "$(SDKROOT)/System/Library/Frameworks"
+        );
+        GCC_C_LANGUAGE_STANDARD = gnu11;
+        GCC_NO_COMMON_BLOCKS = YES;
+        GENERATE_INFOPLIST_FILE = YES;
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+        INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+        IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+        LD_RUNPATH_SEARCH_PATHS = (
+          "$(inherited)",
+          "@executable_path/Frameworks",
+        );
+        MARKETING_VERSION = 1.0;
+        MTL_ENABLE_DEBUG_INFO = NO;
+        MTL_FAST_MATH = YES;
+        PRODUCT_BUNDLE_IDENTIFIER = "com.example.millimasterbuild";
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SDKROOT = iphoneos;
+        SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+        SUPPORTS_MACCATALYST = NO;
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+        SWIFT_COMPILATION_MODE = wholemodule;
+        SWIFT_EMIT_LOC_STRINGS = YES;
+        SWIFT_OPTIMIZATION_LEVEL = "-O";
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+        VALIDATE_PRODUCT = YES;
+      };
+      name = Release;
+    };
+    12ED3C4905B67AF8 /* Debug */ = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        BUNDLE_LOADER = "$(TEST_HOST)";
+        CODE_SIGN_STYLE = Automatic;
+        CURRENT_PROJECT_VERSION = 1;
+        GENERATE_INFOPLIST_FILE = YES;
+        IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+        MARKETING_VERSION = 1.0;
+        PRODUCT_BUNDLE_IDENTIFIER = "com.example.millimasterbuild.Tests";
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SDKROOT = iphoneos;
+        SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+        SUPPORTS_MACCATALYST = NO;
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+        SWIFT_EMIT_LOC_STRINGS = NO;
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+        TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MilliMasterBuild.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MilliMasterBuild";
+      };
+      name = Debug;
+    };
+    DC07561AE2F9B348 /* Release */ = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        BUNDLE_LOADER = "$(TEST_HOST)";
+        CODE_SIGN_STYLE = Automatic;
+        CURRENT_PROJECT_VERSION = 1;
+        GENERATE_INFOPLIST_FILE = YES;
+        IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+        MARKETING_VERSION = 1.0;
+        PRODUCT_BUNDLE_IDENTIFIER = "com.example.millimasterbuild.Tests";
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SDKROOT = iphoneos;
+        SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+        SUPPORTS_MACCATALYST = NO;
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+        SWIFT_EMIT_LOC_STRINGS = NO;
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+        TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MilliMasterBuild.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MilliMasterBuild";
+        VALIDATE_PRODUCT = YES;
+      };
+      name = Release;
+    };
+    50E79B1F26AC348D /* Debug */ = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        CODE_SIGN_STYLE = Automatic;
+        CURRENT_PROJECT_VERSION = 1;
+        GENERATE_INFOPLIST_FILE = YES;
+        MARKETING_VERSION = 1.0;
+        PRODUCT_BUNDLE_IDENTIFIER = "com.example.millimasterbuild.UITests";
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SDKROOT = iphoneos;
+        SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+        SUPPORTS_MACCATALYST = NO;
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+        SWIFT_EMIT_LOC_STRINGS = NO;
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+        TEST_TARGET_NAME = MilliMasterBuild;
+      };
+      name = Debug;
+    };
+    83DA4F2BCE910765 /* Release */ = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        CODE_SIGN_STYLE = Automatic;
+        CURRENT_PROJECT_VERSION = 1;
+        GENERATE_INFOPLIST_FILE = YES;
+        MARKETING_VERSION = 1.0;
+        PRODUCT_BUNDLE_IDENTIFIER = "com.example.millimasterbuild.UITests";
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SDKROOT = iphoneos;
+        SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+        SUPPORTS_MACCATALYST = NO;
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+        SWIFT_EMIT_LOC_STRINGS = NO;
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+        TEST_TARGET_NAME = MilliMasterBuild;
+        VALIDATE_PRODUCT = YES;
+      };
+      name = Release;
+    };
+    /* End XCBuildConfiguration section */
+
+    /* Begin XCConfigurationList section */
+    71439850D2B6CFEA /* Build configuration list for PBXProject "MilliMasterBuild" */ = {
+      isa = XCConfigurationList;
+      buildConfigurations = (
+        E0F2A98DBC567413 /* Debug */,
+        EB3C8ADF67524910 /* Release */
+      );
+      defaultConfigurationIsVisible = 0;
+      defaultConfigurationName = Release;
+    };
+    AF9C86D34E52B710 /* Build configuration list for PBXNativeTarget "MilliMasterBuild" */ = {
+      isa = XCConfigurationList;
+      buildConfigurations = (
+        E0F2A98DBC567413 /* Debug */,
+        EB3C8ADF67524910 /* Release */
+      );
+      defaultConfigurationIsVisible = 0;
+      defaultConfigurationName = Release;
+    };
+    0E12FDB53C46987A /* Build configuration list for PBXNativeTarget "MilliMasterBuildTests" */ = {
+      isa = XCConfigurationList;
+      buildConfigurations = (
+        12ED3C4905B67AF8 /* Debug */,
+        DC07561AE2F9B348 /* Release */
+      );
+      defaultConfigurationIsVisible = 0;
+      defaultConfigurationName = Release;
+    };
+    05F1D427839A6BCE /* Build configuration list for PBXNativeTarget "MilliMasterBuildUITests" */ = {
+      isa = XCConfigurationList;
+      buildConfigurations = (
+        50E79B1F26AC348D /* Debug */,
+        83DA4F2BCE910765 /* Release */
+      );
+      defaultConfigurationIsVisible = 0;
+      defaultConfigurationName = Release;
+    };
+    /* End XCConfigurationList section */
+
+  };
+  rootObject = 623FBC7DE8A19504 /* Project object */;
+}
