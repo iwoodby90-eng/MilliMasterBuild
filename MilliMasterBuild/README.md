@@ -1,19 +1,50 @@
 markdown
-# 🚀 Security Configuration Update
+# Milli Master Build
 
-To ensure the highest level of security for your financial data, the app now uses `deviceOwnerAuthentication`, which supports both Biometrics (FaceID/TouchID) and Device Passcode.
+## Product Overview
+Milli is a high-precision financial management platform for independent earners.
 
-## 🔐 Required Info.plist Keys
+## Canonical Navigation
+- Payouts (Wallet)
+- Mileage (Navigation Arrow)
+- Home (Center M)
+- Wealth (Money Bag)
+- More (Ellipsis)
 
-Add these keys to your Xcode project's **Info** tab to enable secure authentication:
+## Tech Stack
+- SwiftUI
+- SwiftData
+- Combine
 
-1. **NSFaceIDUsageDescription**
-   - **Value:** "Milli requires FaceID to secure your financial data."
+## Architecture
+MVVM (Model-View-ViewModel) with centralized design tokens.
 
-2. **NSBiometricsUsageDescription** (Optional, for older iOS versions)
-   - **Value:** "Milli requires biometric authentication to access your account."
+## Financial Truth Rules
+- All values must be backed by real state or explicitly marked as DEMO.
+- No hard-coded financial values in production code.
 
-## 🛡️ Security Features Implemented
-- **Hardware-Backed Encryption**: SwiftData models use `@Attribute(.encrypt)` for sensitive fields.
-- **Biometric/Passcode Gate**: The app uses `LAContext` to enforce authentication before rendering the dashboard.
-- **Auto-Lock**: The app automatically calls `security.lock()` when the `scenePhase` changes to `.background` or `.inactive`, ensuring data is protected when the user leaves the app.
+## Design System
+- Typography: Sora (Displays/Numbers), Inter (Body/Metadata).
+- Colors: Obsidian (Background), Carbon (Surface), Electric Cyan (Accent).
+
+## Environment Setup
+- Xcode 16+
+- iOS 17+
+- Plaid API integration required for live data.
+
+## Build Instructions
+1. Open `MilliMasterBuild.xcodeproj` in Xcode 16+.
+2. Ensure all dependencies are resolved.
+3. Run on iOS 17+ Simulator.
+
+## Test Instructions
+- Run unit tests via Cmd+U.
+- Verify UI via Preview or Simulator.
+
+## Visual Reference Precedence
+- Hardware-inspired navigation components take precedence over standard UI.
+
+## Definition of Done
+- Navigation visually matches hardware reference.
+- Home dashboard sections are fully implemented with real state.
+- Unit tests pass for all financial calculations.

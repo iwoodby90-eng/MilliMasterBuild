@@ -3,71 +3,113 @@ import SwiftData
 
 struct HomeDashboardView: View {
     @Query(sort: \Payout.date, order: .reverse) private var payouts: [Payout]
+    @Query(sort: \TaxVault.date, order: .reverse) private var taxVaults: [TaxVault]
     @StateObject private var viewModel = MilliViewModel()
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 24) {
-                // Header
-                HStack {
-                    Text("MILLI").font(.system(size: 12, weight: .black, design: .monospaced)).tracking(4)
-                    Spacer()
-                    Image(systemName: "bell.badge").foregroundColor(MilliColors.electricCyan)
-                }
-                .padding(.top)
-                
-                // Primary Balance
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("AVAILABLE TO SPEND").font(.system(size: 10, weight: .bold, design: .monospaced)).foregroundColor(.gray)
-                    Text(viewModel.totalBalance, format: .currency(code: "USD"))
-                        .font(.system(size: 44, weight: .black, design: .monospaced))
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                
-                // Latest Payout
-                if let latest = payouts.first {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text("LATEST PAYOUT").font(.system(size: 10, weight: .bold, design: .monospaced)).foregroundColor(.gray)
-                        MilliFinancialCard(payout: latest)
-                    }
-                }
-                
-                // Metrics
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("INSIGHTS").font(.system(size: 10, weight: .bold, design: .monospaced)).foregroundColor(.gray)
-                    MilliMetricCard(title: "TAX VAULT", value: "$4,200.00", status: "ON TRACK")
-                }
-                
-                // Quick Actions
-                HStack(spacing: 16) {
-                    Button(action: {}) {
-                        Label("Transfer", systemImage: "arrow.left.arrow.right")
-                            .font(.system(size: 12, weight: .bold, design: .monospaced))
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(MilliColors.carbon)
-                            .cornerRadius(12)
-                    }
-                    Button(action: {}) {
-                        Label("Deposit", systemImage: "plus")
-                            .font(.system(size: 12, weight: .bold, design: .monospaced))
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(MilliColors.carbon)
-                            .cornerRadius(12)
-                    }
-                }
-                .foregroundColor(.white)
+            VStack(alignment: .leading, spacing: 32) {
+                header
+                availableToSpend
+                latestPayoutSection
+                taxVaultSection
+                taxReadyScoreSection
+                financialTimelineSection
+                mileageSnapshotSection
+                retirementSection
+                investingSection
+                wealthTeaserSection
+                milliAIInsightSection
             }
             .padding(24)
             .padding(.bottom, 100)
         }
         .background(MilliColors.obsidian.ignoresSafeArea())
-        .onAppear {
-            viewModel.updateBalance(from: payouts)
+    }
+    
+    private var header: some View {
+        HStack {
+            Text("MILLI").font(MilliFont.sora(size: 14, weight: .black)).tracking(4)
+            Spacer()
+            Image(systemName: "bell.badge").foregroundColor(MilliColors.electricCyan)
         }
-        .refreshable {
-            viewModel.updateBalance(from: payouts)
+        .padding(.top)
+    }
+    
+    private var availableToSpend: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("AVAILABLE TO SPEND").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
+            Text(viewModel.totalBalance, format: .currency(code: "USD"))
+                .font(MilliFont.sora(size: 44, weight: .black))
+                .monospacedDigit()
+        }
+    }
+    
+    private var latestPayoutSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("LATEST PAYOUT").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
+            if let latest = payouts.first {
+                MilliFinancialCard(payout: latest)
+            } else {
+                Text("No recent payouts").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
+            }
+        }
+    }
+    
+    private var taxVaultSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("MILLI TAX VAULT™").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
+            let total = taxVaults.reduce(0) { $0 + $1.amount }
+            MilliMetricCard(title: "ESTIMATED SAVINGS", value: total.formatted(.currency(code: "USD")), status: "SYNCED")
+        }
+    }
+    
+    private var taxReadyScoreSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("TAX READY SCORE™").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
+            MilliMetricCard(title: "COMPLIANCE INDEX", value: "98.2", status: "OPTIMAL")
+        }
+    }
+    
+    private var financialTimelineSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("FINANCIAL TIMELINE").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
+            Text("All systems nominal").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
+        }
+    }
+    
+    private var mileageSnapshotSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("MILEAGE SNAPSHOT").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
+            MilliMetricCard(title: "TOTAL MILES", value: "1,240 mi", status: "TRACKING")
+        }
+    }
+    
+    private var retirementSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("RETIREMENT").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
+            Text("Projected: $0.00 (Demo)").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
+        }
+    }
+    
+    private var investingSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("INVESTING").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
+            Text("Portfolio: Unavailable").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
+        }
+    }
+    
+    private var wealthTeaserSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("TREE OF LIFE").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
+            Text("Grow your wealth").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
+        }
+    }
+    
+    private var milliAIInsightSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("MILLI AI INSIGHT").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
+            Text("Scanning financial vitals...").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
         }
     }
 }

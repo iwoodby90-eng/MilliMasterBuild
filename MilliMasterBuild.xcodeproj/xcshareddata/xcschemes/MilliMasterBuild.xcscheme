@@ -3,7 +3,7 @@
    <BuildAction parallelizeBuildables="YES" buildImplicitDependencies="YES">
       <BuildActionEntries>
          <BuildActionEntry buildForTesting="YES" buildForRunning="YES" buildForProfiling="YES" buildForArchiving="YES" buildForAnalyzing="YES">
-            <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="5796DA2EF81B430C" BuildableName="MilliMasterBuild.app" BlueprintName="MilliMasterBuild" ReferencedContainer="container:MilliMasterBuild.xcodeproj"/>
+            <BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="6F7E5392D0BAC481" BuildableName="MilliMasterBuild.app" BlueprintName="MilliMasterBuild" ReferencedContainer="container:MilliMasterBuild.xcodeproj"/>
          </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
@@ -13,7 +13,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6291CB340A5D7F8E"
+               BlueprintIdentifier = "CAE0D7B9148F2635"
                BuildableName = "MilliMasterBuildTests.xctest"
                BlueprintName = "MilliMasterBuildTests"
                ReferencedContainer = "container:MilliMasterBuild.xcodeproj">
@@ -23,7 +23,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "610AEF2B9D74835C"
+               BlueprintIdentifier = "BE21498DC6A3507F"
                BuildableName = "MilliMasterBuildUITests.xctest"
                BlueprintName = "MilliMasterBuildUITests"
                ReferencedContainer = "container:MilliMasterBuild.xcodeproj">
@@ -33,7 +33,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5796DA2EF81B430C"
+            BlueprintIdentifier = "6F7E5392D0BAC481"
             BuildableName = "MilliMasterBuild.app"
             BlueprintName = "MilliMasterBuild"
             ReferencedContainer = "container:MilliMasterBuild.xcodeproj">
@@ -44,7 +44,7 @@
       <BuildableProductRunnable runnableDebuggingMode="0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5796DA2EF81B430C"
+            BlueprintIdentifier = "6F7E5392D0BAC481"
             BuildableName = "MilliMasterBuild.app"
             BlueprintName = "MilliMasterBuild"
             ReferencedContainer = "container:MilliMasterBuild.xcodeproj">
@@ -56,7 +56,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5796DA2EF81B430C"
+            BlueprintIdentifier = "6F7E5392D0BAC481"
             BuildableName = "MilliMasterBuild.app"
             BlueprintName = "MilliMasterBuild"
             ReferencedContainer = "container:MilliMasterBuild.xcodeproj">

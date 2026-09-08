@@ -4,30 +4,42 @@ struct MilliNavBar: View {
     @Binding var selectedTab: Int
     
     var body: some View {
-        HStack {
-            navButton(index: 0, icon: "house.fill")
-            navButton(index: 1, icon: "car.fill")
+        ZStack(alignment: .top) {
+            // Machined Metallic Top Rail
+            Rectangle()
+                .fill(LinearGradient(colors: [.gray.opacity(0.3), .black], startPoint: .top, endPoint: .bottom))
+                .frame(height: 1)
             
-            MilliCenterMButton {
-                // Action handled by NotificationCenter
+            HStack(spacing: 0) {
+                navItem(index: 0, icon: "wallet.fill", label: "Payouts")
+                navItem(index: 1, icon: "arrow.triangle.turn.up.right.diamond", label: "Mileage")
+                
+                Spacer()
+                
+                MilliCenterMButton(action: { selectedTab = 2 })
+                    .offset(y: -25)
+                
+                Spacer()
+                
+                navItem(index: 3, icon: "bag.badge.plus", label: "Wealth")
+                navItem(index: 4, icon: "ellipsis", label: "More")
             }
-            .offset(y: -20)
-            
-            navButton(index: 3, icon: "chart.pie.fill")
-            navButton(index: 4, icon: "gearshape.fill")
+            .padding(.horizontal, 12)
+            .padding(.top, 10)
+            .background(Color.black.ignoresSafeArea())
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
-        .background(MilliColors.obsidian.ignoresSafeArea())
-        .overlay(Divider().background(MilliColors.electricCyan.opacity(0.2)), alignment: .top)
     }
     
-    private func navButton(index: Int, icon: String) -> some View {
+    private func navItem(index: Int, icon: String, label: String) -> some View {
         Button(action: { selectedTab = index }) {
-            Image(systemName: icon)
-                .font(.system(size: 20))
-                .foregroundColor(selectedTab == index ? MilliColors.electricCyan : .gray)
-                .frame(maxWidth: .infinity)
+            VStack(spacing: 4) {
+                Image(systemName: icon)
+                    .font(.system(size: 20))
+                Text(label.uppercased())
+                    .font(MilliFont.inter(size: 9, weight: .bold))
+            }
+            .foregroundColor(selectedTab == index ? MilliColors.electricCyan : .gray)
+            .frame(width: 60)
         }
     }
 }
