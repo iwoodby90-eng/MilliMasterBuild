@@ -14,7 +14,7 @@ struct MilliNavBar: View {
             MilliCenterMButton { 
                 onMilliTap()
             }
-            .offset(y: -20)
+            .offset(y: -25)
             
             Spacer()
             
@@ -22,18 +22,26 @@ struct MilliNavBar: View {
             navItem(index: 4, icon: "line.3.horizontal", label: "More")
         }
         .padding(.horizontal, 24)
+        .padding(.top, 10)
         .padding(.bottom, 34)
-        .background(MilliColors.obsidian.opacity(0.8).background(.ultraThinMaterial))
+        .background(
+            Rectangle()
+                .fill(MilliColors.obsidian.opacity(0.9))
+                .background(.ultraThinMaterial)
+                .overlay(Rectangle().frame(height: 0.5).foregroundColor(MilliColors.electricCyan.opacity(0.2)), alignment: .top)
+        )
     }
     
     private func navItem(index: Int, icon: String, label: String) -> some View {
-        Button(action: { withAnimation { selectedTab = index } }) {
-            VStack(spacing: 4) {
-                Image(systemName: icon).font(.system(size: 20, weight: .medium))
-                Text(label).font(.system(size: 9, weight: .bold, design: .rounded))
+        Button(action: { withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) { selectedTab = index } }) {
+            VStack(spacing: 6) {
+                Image(systemName: icon)
+                    .font(.system(size: 22, weight: .medium))
+                Text(label)
+                    .font(.system(size: 9, weight: .bold, design: .monospaced))
             }
-            .foregroundColor(selectedTab == index ? MilliColors.electricCyan : .gray.opacity(0.5))
-            .frame(width: 60)
+            .foregroundColor(selectedTab == index ? MilliColors.electricCyan : .gray.opacity(0.6))
+            .frame(width: 65)
         }
     }
 }

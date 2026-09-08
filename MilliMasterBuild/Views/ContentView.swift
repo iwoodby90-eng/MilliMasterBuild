@@ -1,40 +1,37 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedTab = 2
+    @State private var selectedTab = 0
     @StateObject private var aiViewModel = MilliAIViewModel()
     @EnvironmentObject var securityManager: SecurityManager
     
     var body: some View {
         ZStack {
-            if securityManager.isAuthenticated {
-                VStack(spacing: 0) {
+            if securityManager.isLocked {
+                LockView()
+            } else {
+                ZStack(alignment: .bottom) {
                     TabView(selection: $selectedTab) {
-                        PayoutsView().tag(0)
-                        MileageView().tag(1)
-                        HomeDashboardView().tag(2)
-                        WealthView().tag(3)
-                        MilliSettingsView().tag(4)
+                        HomeDashboardView()
+                            .tag(0)
+                        PayoutsView()
+                            .tag(1)
+                        Color.clear.tag(2)
+                        WealthView()
+                            .tag(3)
+                        MilliSettingsView()
+                            .tag(4)
                     }
                     
                     MilliNavBar(selectedTab: $selectedTab) {
                         aiViewModel.triggerEventInsight(event: "manual_check")
                     }
                 }
-                .overlay(
-                    Group {
-                        if aiViewModel.showMilliOverlay {
-                            MilliAIOverlayView(viewModel: aiViewModel)
-                        }
-                    }
-                )
-            } else {
-                LockScreenView(securityManager: securityManager)
-            }
-        }
-        .onAppear { 
-            if !securityManager.isAuthenticated {
-                securityManager.authenticate() 
+                .ignoresSafeArea(.keyboard)
+                
+                if aiViewModel.showMilliOverlay {
+                    MilliAIOverlayView(viewModel: aiViewModel)
+                }
             }
         }
     }

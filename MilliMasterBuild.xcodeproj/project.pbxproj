@@ -7,81 +7,87 @@
   objects = {
 
     /* Begin PBXBuildFile section */
-    BE3CD875921640FA /* MilliColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A43F7BED012589; };
-    4189E6BD7C5F203A /* MilliCenterMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2AB97546C831DE; };
-    EC61A83245FB07D9 /* MilliNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CE798B01F2DA5; };
-    01AD94523CB68F7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138795C2EA406BDF; };
-    0E1972F4C35D6A8B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1294AF078BC5E3D6; };
-    E3091D76C84FA25B /* View+PressEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B1DCAF96372E84; };
-    DFA0B1792C348E56 /* HomeDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB09D724C8E65A; };
-    07891F23AB4C56ED /* FinancialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E92AD35F1B6C0; };
-    6F3AE927C8B10D45 /* MilliViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56FBE14073A92D8; };
-    2E568D94CA7BF103 /* MileageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01A8FD562C4973B; };
-    2D8AEC94367015FB /* MilliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42798EAB613FC50; };
-    F435E8926B17D0AC /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C79BAD3425618FE; };
-    473C8F2DEA160B95 /* WealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01965E278C4F3AB; };
-    52EA1B4F7038C96D /* PlaidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586DEB21F0479AC3; };
-    9315204F8D76CAEB /* MilliAIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C8D1B942E356AF; };
-    4963ABD7E5218C0F /* MilliAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8235764C1EA0FD9B; };
-    54C7D683A0BE2F19 /* MilliAIOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B450C837DF16EA9; };
-    6CBE90FD275134A8 /* MilliSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B1ADC23745896F; };
-    0ABE128D3F4956C7 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 0142D983EFA67C5B; };
-    736809FCD541EA2B /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE683142D0B57FC; };
-    269A8FBD4E15C370 /* MileageEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D81C92FA75430E; };
-    3A59B7C1286F40ED /* PayoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EB5D91C3A8F276; };
-    0DBC165EA4F28739 /* MilliMasterBuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72BE15DF604C389; };
-    6534CBFD8A2E7910 /* MilliMasterBuildUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F7E810623D5BC; };
-    B34F80D2C97EA165 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF3192AD67E485C; };
+    2BC1F49A6805E7D3 /* MilliColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F3B4ED7018C925; };
+    BAD9F87654321E0C /* MilliCenterMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3259DC17E64B80; };
+    CF480A753D12E96B /* MilliNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D0174829ACE36B; };
+    0C4A1ED265F7B389 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A0B948CD3625EF; };
+    6C7318D5B4F0E29A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 14C579AEF863B20D; };
+    26975EB34C18DA0F /* View+PressEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01579E2A3BC48FD6; };
+    E0DCBF63718294A5 /* HomeDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4B57D136289CEF; };
+    4096FE15D28B73CA /* FinancialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E327B1840CA5DF9; };
+    036C941DB258F7AE /* MilliViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5038DA97F4BC1E62; };
+    D01A752496B8C3EF /* MileageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B621A407359DFC; };
+    36DB2F9C45170E8A /* MilliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92753CA68D410EF; };
+    0B6FAD47C1E59238 /* SecurityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E75F01CB8649A2; };
+    578F94A3D21ECB06 /* WealthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674321CFA905BD8E; };
+    C7A1B4F50283DE96 /* PlaidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E438A1FD52CB69; };
+    37598B2E1AD4C06F /* MilliAIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8A7654321D0BEF; };
+    012D97ACBE6438F5 /* MilliAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239ED7F1086BC45A; };
+    E1C7053D862FAB94 /* MilliAIOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2718D0B4A3569EF; };
+    7E8193DC0425F6AB /* MilliSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A579EC06F182B43D; };
+    04F8D19B235CE76A /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 30BD186A7C45E92F; };
+    F48D325BC9170A6E /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B943625A8E7FDC; };
+    9CA716DF2E845B03 /* MileageEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51F604A28CD397; };
+    31B47E0258DC6F9A /* PayoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0A6192D38C45E; };
+    0591A2F346D7BCE8 /* AddEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AE48DCF7659B03; };
+    371FE6940ACDB825 /* ConnectBankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5E082DC4F39B6; };
+    6C4B73E5F2A810D9 /* MilliCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AB398061C254FE; };
+    F13267D80CB9A45E /* MilliMasterBuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1427E0B8C3AD956F; };
+    B4A012E9D7C865F3 /* MilliMasterBuildUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2538BC09671EA4FD; };
+    9E7FA65BC4D32180 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E02D356F4BC91A87; };
     /* End PBXBuildFile section */
 
     /* Begin PBXFileReference section */
-    21DF5068EB73CA49 /* MilliMasterBuild.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MilliMasterBuild.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-    C6A43F7BED012589 /* MilliColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliColors.swift"; sourceTree = "<group>"; };
-    0F2AB97546C831DE /* MilliCenterMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliCenterMButton.swift"; sourceTree = "<group>"; };
-    364CE798B01F2DA5 /* MilliNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliNavBar.swift"; sourceTree = "<group>"; };
-    138795C2EA406BDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
-    1294AF078BC5E3D6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text.markdown; path = "README.md"; sourceTree = "<group>"; };
-    05B1DCAF96372E84 /* View+PressEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PressEvents.swift"; sourceTree = "<group>"; };
-    13FB09D724C8E65A /* HomeDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDashboardView.swift"; sourceTree = "<group>"; };
-    847E92AD35F1B6C0 /* FinancialData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FinancialData.swift"; sourceTree = "<group>"; };
-    C56FBE14073A92D8 /* MilliViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliViewModel.swift"; sourceTree = "<group>"; };
-    E01A8FD562C4973B /* MileageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MileageView.swift"; sourceTree = "<group>"; };
-    D42798EAB613FC50 /* MilliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliApp.swift"; sourceTree = "<group>"; };
-    0C79BAD3425618FE /* SecurityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecurityManager.swift"; sourceTree = "<group>"; };
-    D01965E278C4F3AB /* WealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WealthView.swift"; sourceTree = "<group>"; };
-    586DEB21F0479AC3 /* PlaidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaidManager.swift"; sourceTree = "<group>"; };
-    07C8D1B942E356AF /* MilliAIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliAIViewModel.swift"; sourceTree = "<group>"; };
-    8235764C1EA0FD9B /* MilliAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliAIService.swift"; sourceTree = "<group>"; };
-    2B450C837DF16EA9 /* MilliAIOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliAIOverlayView.swift"; sourceTree = "<group>"; };
-    E0B1ADC23745896F /* MilliSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliSettingsView.swift"; sourceTree = "<group>"; };
-    0142D983EFA67C5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
-    9AE683142D0B57FC /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LockScreenView.swift"; sourceTree = "<group>"; };
-    B6D81C92FA75430E /* MileageEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MileageEntry.swift"; sourceTree = "<group>"; };
-    04EB5D91C3A8F276 /* PayoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PayoutsView.swift"; sourceTree = "<group>"; };
-    A72BE15DF604C389 /* MilliMasterBuildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliMasterBuildTests.swift"; sourceTree = "<group>"; };
-    4A9F7E810623D5BC /* MilliMasterBuildUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliMasterBuildUITests.swift"; sourceTree = "<group>"; };
-    5A43CE76DFB82910 /* MilliMasterBuildTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilliMasterBuildTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-    B02A8FDE46C15397 /* MilliMasterBuildUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilliMasterBuildUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-    0BF3192AD67E485C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+    897F65A4EDB3C210 /* MilliMasterBuild.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MilliMasterBuild.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+    A6F3B4ED7018C925 /* MilliColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliColors.swift"; sourceTree = "<group>"; };
+    AF3259DC17E64B80 /* MilliCenterMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliCenterMButton.swift"; sourceTree = "<group>"; };
+    F5D0174829ACE36B /* MilliNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliNavBar.swift"; sourceTree = "<group>"; };
+    17A0B948CD3625EF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+    14C579AEF863B20D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text.markdown; path = "README.md"; sourceTree = "<group>"; };
+    01579E2A3BC48FD6 /* View+PressEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+PressEvents.swift"; sourceTree = "<group>"; };
+    0A4B57D136289CEF /* HomeDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDashboardView.swift"; sourceTree = "<group>"; };
+    6E327B1840CA5DF9 /* FinancialData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FinancialData.swift"; sourceTree = "<group>"; };
+    5038DA97F4BC1E62 /* MilliViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliViewModel.swift"; sourceTree = "<group>"; };
+    E8B621A407359DFC /* MileageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MileageView.swift"; sourceTree = "<group>"; };
+    B92753CA68D410EF /* MilliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliApp.swift"; sourceTree = "<group>"; };
+    D3E75F01CB8649A2 /* SecurityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecurityManager.swift"; sourceTree = "<group>"; };
+    674321CFA905BD8E /* WealthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WealthView.swift"; sourceTree = "<group>"; };
+    07E438A1FD52CB69 /* PlaidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaidManager.swift"; sourceTree = "<group>"; };
+    9C8A7654321D0BEF /* MilliAIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliAIViewModel.swift"; sourceTree = "<group>"; };
+    239ED7F1086BC45A /* MilliAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliAIService.swift"; sourceTree = "<group>"; };
+    C2718D0B4A3569EF /* MilliAIOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliAIOverlayView.swift"; sourceTree = "<group>"; };
+    A579EC06F182B43D /* MilliSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliSettingsView.swift"; sourceTree = "<group>"; };
+    30BD186A7C45E92F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
+    10B943625A8E7FDC /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LockScreenView.swift"; sourceTree = "<group>"; };
+    BE51F604A28CD397 /* MileageEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MileageEntry.swift"; sourceTree = "<group>"; };
+    B7F0A6192D38C45E /* PayoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PayoutsView.swift"; sourceTree = "<group>"; };
+    12AE48DCF7659B03 /* AddEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddEntryView.swift"; sourceTree = "<group>"; };
+    71A5E082DC4F39B6 /* ConnectBankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConnectBankView.swift"; sourceTree = "<group>"; };
+    D7AB398061C254FE /* MilliCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliCardView.swift"; sourceTree = "<group>"; };
+    1427E0B8C3AD956F /* MilliMasterBuildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliMasterBuildTests.swift"; sourceTree = "<group>"; };
+    2538BC09671EA4FD /* MilliMasterBuildUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilliMasterBuildUITests.swift"; sourceTree = "<group>"; };
+    540EA16839FC2BD7 /* MilliMasterBuildTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilliMasterBuildTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+    F0123D45C6E7A89B /* MilliMasterBuildUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MilliMasterBuildUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+    E02D356F4BC91A87 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
     /* End PBXFileReference section */
 
     /* Begin PBXFrameworksBuildPhase section */
-    7264538FDC01B9AE /* Frameworks */ = {
+    60FAD1BE2897345C /* Frameworks */ = {
       isa = PBXFrameworksBuildPhase;
       buildActionMask = 2147483647;
       files = (
-        B34F80D2C97EA165 /* SwiftUI.framework in Frameworks */
+        9E7FA65BC4D32180 /* SwiftUI.framework in Frameworks */
       );
       runOnlyForDeploymentPostprocessing = 0;
     };
-    2B1E69735D8C4FA0 /* Frameworks */ = {
+    8D0AB35E71492F6C /* Frameworks */ = {
       isa = PBXFrameworksBuildPhase;
       buildActionMask = 2147483647;
       files = (
       );
       runOnlyForDeploymentPostprocessing = 0;
     };
-    70B1D32456F9C8AE /* Frameworks */ = {
+    BF0D164E27A5C389 /* Frameworks */ = {
       isa = PBXFrameworksBuildPhase;
       buildActionMask = 2147483647;
       files = (
@@ -91,124 +97,127 @@
     /* End PBXFrameworksBuildPhase section */
 
     /* Begin PBXGroup section */
-    2FA098C13745E6DB /* Main Group */ = {
+    3AEB6D52C78140F9 /* Main Group */ = {
       isa = PBXGroup;
       children = (
-        7604F8ADB5EC1239 /* MilliMasterBuild */,
-        B31978FED064CA52 /* MilliMasterBuildTests */,
-        67DE8AC3215B409F /* MilliMasterBuildUITests */,
-        352A104BFD67C89E /* Products */
+        597FC28E613A04BD /* MilliMasterBuild */,
+        9EC08A4517B623FD /* MilliMasterBuildTests */,
+        247DF19CA36B058E /* MilliMasterBuildUITests */,
+        5D230B1A64C7E9F8 /* Products */
       );
       sourceTree = "<group>";
     };
-    7604F8ADB5EC1239 /* MilliMasterBuild */ = {
+    597FC28E613A04BD /* MilliMasterBuild */ = {
       isa = PBXGroup;
       children = (
-        91F3DAB0C642758E,
-        217340C985FABDE6,
-        B5E347CD2610F98A,
-        3F6E2CDA8951074B,
-        A8259D7F1E60C3B4,
-        732D1864C0EBFA59,
-        0F2AB97546C831DE,
-        364CE798B01F2DA5,
-        1294AF078BC5E3D6,
-        D42798EAB613FC50
+        36289CFEDB5071A4,
+        594B0F27EA31D68C,
+        A3D90C4B5762E8F1,
+        B3F05E4CD7189A26,
+        24B615C307E9A8FD,
+        028FC96BE13457AD,
+        AF3259DC17E64B80,
+        F5D0174829ACE36B,
+        14C579AEF863B20D,
+        0A4B57D136289CEF,
+        E8B621A407359DFC,
+        B92753CA68D410EF,
+        674321CFA905BD8E,
+        239ED7F1086BC45A,
+        A579EC06F182B43D,
+        B7F0A6192D38C45E,
+        D7AB398061C254FE
       );
       path = "MilliMasterBuild";
       sourceTree = "<group>";
     };
     
-    91F3DAB0C642758E /* Views */ = {
+    36289CFEDB5071A4 /* Views */ = {
       isa = PBXGroup;
       children = (
-        C6A43F7BED012589,
-        138795C2EA406BDF,
-        13FB09D724C8E65A,
-        E01A8FD562C4973B,
-        D01965E278C4F3AB,
-        2B450C837DF16EA9,
-        E0B1ADC23745896F,
-        9AE683142D0B57FC,
-        04EB5D91C3A8F276
+        A6F3B4ED7018C925,
+        17A0B948CD3625EF,
+        C2718D0B4A3569EF,
+        10B943625A8E7FDC,
+        12AE48DCF7659B03,
+        71A5E082DC4F39B6
       );
       path = "Views";
       sourceTree = "<group>";
     };
-    217340C985FABDE6 /* Milli */ = {
+    594B0F27EA31D68C /* Milli */ = {
       isa = PBXGroup;
       children = (
-        8A42C1BF06397DE5
+        0EC879F5DB1246A3
       );
       path = "Milli";
       sourceTree = "<group>";
     };
-    8A42C1BF06397DE5 /* Extensions */ = {
+    0EC879F5DB1246A3 /* Extensions */ = {
       isa = PBXGroup;
       children = (
-        05B1DCAF96372E84
+        01579E2A3BC48FD6
       );
       path = "Extensions";
       sourceTree = "<group>";
     };
-    B5E347CD2610F98A /* Models */ = {
+    A3D90C4B5762E8F1 /* Models */ = {
       isa = PBXGroup;
       children = (
-        847E92AD35F1B6C0,
-        B6D81C92FA75430E
+        6E327B1840CA5DF9,
+        BE51F604A28CD397
       );
       path = "Models";
       sourceTree = "<group>";
     };
-    3F6E2CDA8951074B /* ViewModels */ = {
+    B3F05E4CD7189A26 /* ViewModels */ = {
       isa = PBXGroup;
       children = (
-        C56FBE14073A92D8,
-        07C8D1B942E356AF
+        5038DA97F4BC1E62,
+        9C8A7654321D0BEF
       );
       path = "ViewModels";
       sourceTree = "<group>";
     };
-    A8259D7F1E60C3B4 /* Services */ = {
+    24B615C307E9A8FD /* Services */ = {
       isa = PBXGroup;
       children = (
-        0C79BAD3425618FE,
-        586DEB21F0479AC3,
-        8235764C1EA0FD9B
+        D3E75F01CB8649A2,
+        07E438A1FD52CB69
       );
       path = "Services";
       sourceTree = "<group>";
     };
-    732D1864C0EBFA59 /* Assets */ = {
+    028FC96BE13457AD /* Assets */ = {
       isa = PBXGroup;
       children = (
-        0142D983EFA67C5B
+        30BD186A7C45E92F
       );
       path = "Assets";
       sourceTree = "<group>";
     };
-    B31978FED064CA52 /* MilliMasterBuildTests */ = {
+    9EC08A4517B623FD /* MilliMasterBuildTests */ = {
       isa = PBXGroup;
       children = (
-        A72BE15DF604C389 /* MilliMasterBuildTests.swift */
+        1427E0B8C3AD956F /* MilliMasterBuildTests.swift */
       );
       path = "MilliMasterBuildTests";
       sourceTree = "<group>";
     };
-    67DE8AC3215B409F /* MilliMasterBuildUITests */ = {
+    247DF19CA36B058E /* MilliMasterBuildUITests */ = {
       isa = PBXGroup;
       children = (
-        4A9F7E810623D5BC /* MilliMasterBuildUITests.swift */
+        2538BC09671EA4FD /* MilliMasterBuildUITests.swift */
       );
       path = "MilliMasterBuildUITests";
       sourceTree = "<group>";
     };
-    352A104BFD67C89E /* Products */ = {
+    5D230B1A64C7E9F8 /* Products */ = {
       isa = PBXGroup;
       children = (
-        21DF5068EB73CA49 /* MilliMasterBuild.app */,
-        5A43CE76DFB82910 /* MilliMasterBuildTests.xctest */,
-        B02A8FDE46C15397 /* MilliMasterBuildUITests.xctest */
+        897F65A4EDB3C210 /* MilliMasterBuild.app */,
+        540EA16839FC2BD7 /* MilliMasterBuildTests.xctest */,
+        F0123D45C6E7A89B /* MilliMasterBuildUITests.xctest */
       );
       name = Products;
       sourceTree = "<group>";
@@ -216,12 +225,12 @@
     /* End PBXGroup section */
 
     /* Begin PBXNativeTarget section */
-    EB47D501C3A296F8 /* MilliMasterBuild */ = {
+    0F12384DB56AC79E /* MilliMasterBuild */ = {
       isa = PBXNativeTarget;
-      buildConfigurationList = C92DAE5036FB7184 /* Build configuration list for PBXNativeTarget "MilliMasterBuild" */;
+      buildConfigurationList = C12F530D48E9B67A /* Build configuration list for PBXNativeTarget "MilliMasterBuild" */;
       buildPhases = (
-        95E281FAD347B60C /* Sources */,
-        7264538FDC01B9AE /* Frameworks */
+        510F9C48A6BD23E7 /* Sources */,
+        60FAD1BE2897345C /* Frameworks */
       );
       buildRules = (
       );
@@ -229,66 +238,66 @@
       );
       name = "MilliMasterBuild";
       productName = "MilliMasterBuild";
-      productReference = 21DF5068EB73CA49 /* MilliMasterBuild.app */;
+      productReference = 897F65A4EDB3C210 /* MilliMasterBuild.app */;
       productType = "com.apple.product-type.application";
     };
-    CF17643B0298ED5A /* MilliMasterBuildTests */ = {
+    095D7BC162A4EF83 /* MilliMasterBuildTests */ = {
       isa = PBXNativeTarget;
-      buildConfigurationList = F96DB37018C254EA /* Build configuration list for PBXNativeTarget "MilliMasterBuildTests" */;
+      buildConfigurationList = E01283BA945CD6F7 /* Build configuration list for PBXNativeTarget "MilliMasterBuildTests" */;
       buildPhases = (
-        DF93625C487BA0E1 /* Sources */,
-        2B1E69735D8C4FA0 /* Frameworks */
+        C4AB16958E23FD07 /* Sources */,
+        8D0AB35E71492F6C /* Frameworks */
       );
       buildRules = (
       );
       dependencies = (
-        2175BDEF0843CA69 /* PBXTargetDependency */
+        AB798FE21D5430C6 /* PBXTargetDependency */
       );
       name = "MilliMasterBuildTests";
       productName = "MilliMasterBuildTests";
-      productReference = 5A43CE76DFB82910 /* MilliMasterBuildTests.xctest */;
+      productReference = 540EA16839FC2BD7 /* MilliMasterBuildTests.xctest */;
       productType = "com.apple.product-type.bundle.unit-test";
     };
-    EB524691FA0C783D /* MilliMasterBuildUITests */ = {
+    3B6E2FCD75189A04 /* MilliMasterBuildUITests */ = {
       isa = PBXNativeTarget;
-      buildConfigurationList = 3A1476CE0859BF2D /* Build configuration list for PBXNativeTarget "MilliMasterBuildUITests" */;
+      buildConfigurationList = 2418DC56E73FB9A0 /* Build configuration list for PBXNativeTarget "MilliMasterBuildUITests" */;
       buildPhases = (
-        179E80CABD3452F6 /* Sources */,
-        70B1D32456F9C8AE /* Frameworks */
+        95E032A6B71C8DF4 /* Sources */,
+        BF0D164E27A5C389 /* Frameworks */
       );
       buildRules = (
       );
       dependencies = (
-        6DF32C1BEA087594 /* PBXTargetDependency */
+        B534186D20C9A7FE /* PBXTargetDependency */
       );
       name = "MilliMasterBuildUITests";
       productName = "MilliMasterBuildUITests";
-      productReference = B02A8FDE46C15397 /* MilliMasterBuildUITests.xctest */;
+      productReference = F0123D45C6E7A89B /* MilliMasterBuildUITests.xctest */;
       productType = "com.apple.product-type.bundle.ui-testing";
     };
     /* End PBXNativeTarget section */
 
     /* Begin PBXProject section */
-    CF501237AE4B9D86 /* Project object */ = {
+    3D79264BA8CF5E01 /* Project object */ = {
       isa = PBXProject;
       attributes = {
         LastSwiftUpdateCheck = 1500;
         LastUpgradeCheck = 1500;
         TargetAttributes = {
-          EB47D501C3A296F8 = {
+          0F12384DB56AC79E = {
             CreatedOnToolsVersion = 15.0;
           };
-          CF17643B0298ED5A = {
+          095D7BC162A4EF83 = {
             CreatedOnToolsVersion = 15.0;
-            TestTargetID = EB47D501C3A296F8;
+            TestTargetID = 0F12384DB56AC79E;
           };
-          EB524691FA0C783D = {
+          3B6E2FCD75189A04 = {
             CreatedOnToolsVersion = 15.0;
-            TestTargetID = EB47D501C3A296F8;
+            TestTargetID = 0F12384DB56AC79E;
           };
         };
       };
-      buildConfigurationList = F30B465DC712A98E /* Build configuration list for PBXProject "MilliMasterBuild" */;
+      buildConfigurationList = 2E154D780C3A6BF9 /* Build configuration list for PBXProject "MilliMasterBuild" */;
       compatibilityVersion = "Xcode 14.0";
       developmentRegion = en;
       hasScannedForEncodings = 0;
@@ -296,98 +305,101 @@
         en,
         Base
       );
-      mainGroup = 2FA098C13745E6DB;
-      productRefGroup = 352A104BFD67C89E /* Products */;
+      mainGroup = 3AEB6D52C78140F9;
+      productRefGroup = 5D230B1A64C7E9F8 /* Products */;
       projectDirPath = "";
       projectRoot = "";
       targets = (
-        EB47D501C3A296F8 /* MilliMasterBuild */,
-        CF17643B0298ED5A /* MilliMasterBuildTests */,
-        EB524691FA0C783D /* MilliMasterBuildUITests */
+        0F12384DB56AC79E /* MilliMasterBuild */,
+        095D7BC162A4EF83 /* MilliMasterBuildTests */,
+        3B6E2FCD75189A04 /* MilliMasterBuildUITests */
       );
     };
     /* End PBXProject section */
 
     /* Begin PBXSourcesBuildPhase section */
-    95E281FAD347B60C /* Sources */ = {
+    510F9C48A6BD23E7 /* Sources */ = {
       isa = PBXSourcesBuildPhase;
       buildActionMask = 2147483647;
       files = (
-        BE3CD875921640FA,
-        4189E6BD7C5F203A,
-        EC61A83245FB07D9,
-        01AD94523CB68F7E,
-        0E1972F4C35D6A8B,
-        E3091D76C84FA25B,
-        DFA0B1792C348E56,
-        07891F23AB4C56ED,
-        6F3AE927C8B10D45,
-        2E568D94CA7BF103,
-        2D8AEC94367015FB,
-        F435E8926B17D0AC,
-        473C8F2DEA160B95,
-        52EA1B4F7038C96D,
-        9315204F8D76CAEB,
-        4963ABD7E5218C0F,
-        54C7D683A0BE2F19,
-        6CBE90FD275134A8,
-        0ABE128D3F4956C7,
-        736809FCD541EA2B,
-        269A8FBD4E15C370,
-        3A59B7C1286F40ED
+        2BC1F49A6805E7D3,
+        BAD9F87654321E0C,
+        CF480A753D12E96B,
+        0C4A1ED265F7B389,
+        6C7318D5B4F0E29A,
+        26975EB34C18DA0F,
+        E0DCBF63718294A5,
+        4096FE15D28B73CA,
+        036C941DB258F7AE,
+        D01A752496B8C3EF,
+        36DB2F9C45170E8A,
+        0B6FAD47C1E59238,
+        578F94A3D21ECB06,
+        C7A1B4F50283DE96,
+        37598B2E1AD4C06F,
+        012D97ACBE6438F5,
+        E1C7053D862FAB94,
+        7E8193DC0425F6AB,
+        04F8D19B235CE76A,
+        F48D325BC9170A6E,
+        9CA716DF2E845B03,
+        31B47E0258DC6F9A,
+        0591A2F346D7BCE8,
+        371FE6940ACDB825,
+        6C4B73E5F2A810D9
       );
       runOnlyForDeploymentPostprocessing = 0;
     };
-    DF93625C487BA0E1 /* Sources */ = {
+    C4AB16958E23FD07 /* Sources */ = {
       isa = PBXSourcesBuildPhase;
       buildActionMask = 2147483647;
       files = (
-        0DBC165EA4F28739 /* MilliMasterBuildTests.swift in Sources */
+        F13267D80CB9A45E /* MilliMasterBuildTests.swift in Sources */
       );
       runOnlyForDeploymentPostprocessing = 0;
     };
-    179E80CABD3452F6 /* Sources */ = {
+    95E032A6B71C8DF4 /* Sources */ = {
       isa = PBXSourcesBuildPhase;
       buildActionMask = 2147483647;
       files = (
-        6534CBFD8A2E7910 /* MilliMasterBuildUITests.swift in Sources */
+        B4A012E9D7C865F3 /* MilliMasterBuildUITests.swift in Sources */
       );
       runOnlyForDeploymentPostprocessing = 0;
     };
     /* End PBXSourcesBuildPhase section */
 
     /* Begin PBXContainerItemProxy section */
-    5310286B9C7EDF4A /* PBXContainerItemProxy */ = {
+    F50A98724D613ECB /* PBXContainerItemProxy */ = {
       isa = PBXContainerItemProxy;
-      containerPortal = CF501237AE4B9D86 /* Project object */;
+      containerPortal = 3D79264BA8CF5E01 /* Project object */;
       proxyType = 1;
-      remoteGlobalIDString = EB47D501C3A296F8;
+      remoteGlobalIDString = 0F12384DB56AC79E;
       remoteInfo = "MilliMasterBuild";
     };
-    23AC96DF1E70B845 /* PBXContainerItemProxy */ = {
+    AC0618723BE9DF45 /* PBXContainerItemProxy */ = {
       isa = PBXContainerItemProxy;
-      containerPortal = CF501237AE4B9D86 /* Project object */;
+      containerPortal = 3D79264BA8CF5E01 /* Project object */;
       proxyType = 1;
-      remoteGlobalIDString = EB47D501C3A296F8;
+      remoteGlobalIDString = 0F12384DB56AC79E;
       remoteInfo = "MilliMasterBuild";
     };
     /* End PBXContainerItemProxy section */
 
     /* Begin PBXTargetDependency section */
-    2175BDEF0843CA69 /* PBXTargetDependency */ = {
+    AB798FE21D5430C6 /* PBXTargetDependency */ = {
       isa = PBXTargetDependency;
-      target = EB47D501C3A296F8 /* MilliMasterBuild */;
-      targetProxy = 5310286B9C7EDF4A /* PBXContainerItemProxy */;
+      target = 0F12384DB56AC79E /* MilliMasterBuild */;
+      targetProxy = F50A98724D613ECB /* PBXContainerItemProxy */;
     };
-    6DF32C1BEA087594 /* PBXTargetDependency */ = {
+    B534186D20C9A7FE /* PBXTargetDependency */ = {
       isa = PBXTargetDependency;
-      target = EB47D501C3A296F8 /* MilliMasterBuild */;
-      targetProxy = 23AC96DF1E70B845 /* PBXContainerItemProxy */;
+      target = 0F12384DB56AC79E /* MilliMasterBuild */;
+      targetProxy = AC0618723BE9DF45 /* PBXContainerItemProxy */;
     };
     /* End PBXTargetDependency section */
 
     /* Begin XCBuildConfiguration section */
-    051F3CB428AE6D97 /* Debug */ = {
+    3754F1ACE628B0D9 /* Debug */ = {
       isa = XCBuildConfiguration;
       buildSettings = {
         ALWAYS_SEARCH_USER_PATHS = NO;
@@ -444,7 +456,7 @@
       };
       name = Debug;
     };
-    21BFA5E9083C74D6 /* Release */ = {
+    70B8129CF3D4A65E /* Release */ = {
       isa = XCBuildConfiguration;
       buildSettings = {
         ALWAYS_SEARCH_USER_PATHS = NO;
@@ -496,7 +508,7 @@
       };
       name = Release;
     };
-    C68A9B7F041235DE /* Debug */ = {
+    051943A86CF27DEB /* Debug */ = {
       isa = XCBuildConfiguration;
       buildSettings = {
         BUNDLE_LOADER = "$(TEST_HOST)";
@@ -518,7 +530,7 @@
       };
       name = Debug;
     };
-    82F9B31AC507E4D6 /* Release */ = {
+    3CAFD106947B52E8 /* Release */ = {
       isa = XCBuildConfiguration;
       buildSettings = {
         BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,7 +553,7 @@
       };
       name = Release;
     };
-    0B3AE84915CF67D2 /* Debug */ = {
+    3794560E8BDFCA12 /* Debug */ = {
       isa = XCBuildConfiguration;
       buildSettings = {
         CODE_SIGN_STYLE = Automatic;
@@ -561,7 +573,7 @@
       };
       name = Debug;
     };
-    D3FE1C8B9427605A /* Release */ = {
+    769CED503184AF2B /* Release */ = {
       isa = XCBuildConfiguration;
       buildSettings = {
         CODE_SIGN_STYLE = Automatic;
@@ -585,38 +597,38 @@
     /* End XCBuildConfiguration section */
 
     /* Begin XCConfigurationList section */
-    F30B465DC712A98E /* Build configuration list for PBXProject "MilliMasterBuild" */ = {
+    2E154D780C3A6BF9 /* Build configuration list for PBXProject "MilliMasterBuild" */ = {
       isa = XCConfigurationList;
       buildConfigurations = (
-        051F3CB428AE6D97 /* Debug */,
-        21BFA5E9083C74D6 /* Release */
+        3754F1ACE628B0D9 /* Debug */,
+        70B8129CF3D4A65E /* Release */
       );
       defaultConfigurationIsVisible = 0;
       defaultConfigurationName = Release;
     };
-    C92DAE5036FB7184 /* Build configuration list for PBXNativeTarget "MilliMasterBuild" */ = {
+    C12F530D48E9B67A /* Build configuration list for PBXNativeTarget "MilliMasterBuild" */ = {
       isa = XCConfigurationList;
       buildConfigurations = (
-        051F3CB428AE6D97 /* Debug */,
-        21BFA5E9083C74D6 /* Release */
+        3754F1ACE628B0D9 /* Debug */,
+        70B8129CF3D4A65E /* Release */
       );
       defaultConfigurationIsVisible = 0;
       defaultConfigurationName = Release;
     };
-    F96DB37018C254EA /* Build configuration list for PBXNativeTarget "MilliMasterBuildTests" */ = {
+    E01283BA945CD6F7 /* Build configuration list for PBXNativeTarget "MilliMasterBuildTests" */ = {
       isa = XCConfigurationList;
       buildConfigurations = (
-        C68A9B7F041235DE /* Debug */,
-        82F9B31AC507E4D6 /* Release */
+        051943A86CF27DEB /* Debug */,
+        3CAFD106947B52E8 /* Release */
       );
       defaultConfigurationIsVisible = 0;
       defaultConfigurationName = Release;
     };
-    3A1476CE0859BF2D /* Build configuration list for PBXNativeTarget "MilliMasterBuildUITests" */ = {
+    2418DC56E73FB9A0 /* Build configuration list for PBXNativeTarget "MilliMasterBuildUITests" */ = {
       isa = XCConfigurationList;
       buildConfigurations = (
-        0B3AE84915CF67D2 /* Debug */,
-        D3FE1C8B9427605A /* Release */
+        3794560E8BDFCA12 /* Debug */,
+        769CED503184AF2B /* Release */
       );
       defaultConfigurationIsVisible = 0;
       defaultConfigurationName = Release;
@@ -624,5 +636,5 @@
     /* End XCConfigurationList section */
 
   };
-  rootObject = CF501237AE4B9D86 /* Project object */;
+  rootObject = 3D79264BA8CF5E01 /* Project object */;
 }
