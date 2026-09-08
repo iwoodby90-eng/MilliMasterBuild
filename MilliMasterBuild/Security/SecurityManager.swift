@@ -1,35 +1,23 @@
-import LocalAuthentication
 import SwiftUI
+import LocalAuthentication
 
 class SecurityManager: ObservableObject {
-    @Published var isAuthenticated = false
-    @Published var authError: String?
+    @Published var isUnlocked = false
+    
+    func lock() {
+        isUnlocked = false
+    }
     
     func authenticate() {
         let context = LAContext()
         var error: NSError?
         
-        // Use deviceOwnerAuthentication to allow fallback to passcode if biometrics fail
         if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
-            let reason = "Milli requires authentication to access your financial data."
-            
-            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, error in
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Authenticate to access your Milli account") { success, _ in
                 DispatchQueue.main.async {
-                    if success {
-                        self.isAuthenticated = true
-                        self.authError = nil
-                    } else {
-                        self.isAuthenticated = false
-                        self.authError = error?.localizedDescription ?? "Authentication failed"
-                    }
+                    self.isUnlocked = success
                 }
             }
-        } else {
-            self.authError = "Biometrics/Passcode not available"
         }
-    }
-    
-    func lock() {
-        isAuthenticated = false
     }
 }

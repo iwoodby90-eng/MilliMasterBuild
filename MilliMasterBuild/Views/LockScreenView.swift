@@ -28,29 +28,26 @@ struct LockScreenView: View {
                         .foregroundColor(.gray)
                 }
                 
-                Button(action: { securityManager.authenticate() }) {
+                Button(action: { 
+                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                    securityManager.authenticate() 
+                }) {
                     HStack {
                         Image(systemName: "faceid")
                         Text("Unlock Access")
                     }
-                    .font(.headline)
-                    .padding()
-                    .frame(width: 220)
-                    .background(MilliColors.electricCyan)
-                    .foregroundColor(MilliColors.obsidian)
-                    .cornerRadius(16)
-                }
-                .buttonStyle(.plain)
-                
-                if let error = securityManager.authError {
-                    Text(error)
-                        .font(.caption)
-                        .foregroundColor(.red.opacity(0.8))
+                    .font(.system(size: 14, weight: .bold, design: .monospaced))
+                    .padding(.horizontal, 32)
+                    .padding(.vertical, 16)
+                    .background(MilliColors.electricCyan.opacity(0.1))
+                    .foregroundColor(MilliColors.electricCyan)
+                    .cornerRadius(12)
+                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(MilliColors.electricCyan.opacity(0.3), lineWidth: 1))
                 }
                 
                 Spacer()
             }
-            .padding()
+            .padding(40)
         }
     }
 }

@@ -1,49 +1,23 @@
 import SwiftUI
 
 struct MilliSettingsView: View {
-    var body: some View {
-        NavigationStack {
-            List {
-                Section {
-                    SettingsRow(title: "Account Security", icon: "lock.shield.fill")
-                    SettingsRow(title: "Connected Banks", icon: "building.columns.fill")
-                } header: { 
-                    Text("SECURITY").font(.system(size: 10, weight: .black, design: .monospaced)).foregroundColor(.gray) 
-                }
-                
-                Section {
-                    SettingsRow(title: "Data Privacy", icon: "hand.raised.fill")
-                    SettingsRow(title: "App Version", icon: "info.circle.fill")
-                } header: { 
-                    Text("ABOUT").font(.system(size: 10, weight: .black, design: .monospaced)).foregroundColor(.gray) 
-                }
-            }
-            .scrollContentBackground(.hidden)
-            .background(MilliColors.obsidian)
-            .navigationTitle("Settings")
-            .toolbarBackground(MilliColors.obsidian, for: .navigationBar)
-            .toolbarColorScheme(.dark, for: .navigationBar)
-        }
-    }
-}
-
-struct SettingsRow: View {
-    let title: String
-    let icon: String
+    @AppStorage("biometricEnabled") private var biometricEnabled = true
     
     var body: some View {
-        HStack(spacing: 16) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 8).fill(MilliColors.electricCyan.opacity(0.1))
-                Image(systemName: icon).foregroundColor(MilliColors.electricCyan)
+        List {
+            Section(header: Text("SECURITY").font(.system(size: 10, design: .monospaced))) {
+                Toggle("Enable FaceID", isOn: $biometricEnabled)
+                    .tint(MilliColors.electricCyan)
             }
-            .frame(width: 36, height: 36)
+            .listRowBackground(MilliColors.carbon)
             
-            Text(title).font(.system(.body, design: .rounded)).foregroundColor(.white)
-            Spacer()
-            Image(systemName: "chevron.right").font(.system(size: 14, weight: .semibold)).foregroundColor(.gray.opacity(0.5))
+            Section(header: Text("ACCOUNT").font(.system(size: 10, design: .monospaced))) {
+                Button("Export Data") {}.foregroundColor(.white)
+                Button("Delete Account") {}.foregroundColor(.red)
+            }
+            .listRowBackground(MilliColors.carbon)
         }
-        .padding(.vertical, 4)
-        .listRowBackground(MilliColors.carbon.opacity(0.5))
+        .scrollContentBackground(.hidden)
+        .background(MilliColors.obsidian)
     }
 }

@@ -11,8 +11,9 @@ struct MilliCenterMButton: View {
                 isPressed = true
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                isPressed = false
+                withAnimation(.spring()) { isPressed = false }
                 action()
+                NotificationCenter.default.post(name: NSNotification.Name("TriggerAI"), object: nil)
             }
         }) {
             ZStack {
@@ -21,12 +22,13 @@ struct MilliCenterMButton: View {
                     .frame(width: 64, height: 64)
                     .overlay(Circle().stroke(MilliColors.electricCyan, lineWidth: 2))
                 
-                Text("M")
-                    .font(.system(size: 24, weight: .black, design: .monospaced))
+                Image(systemName: "sparkles")
+                    .font(.system(size: 24, weight: .bold))
                     .foregroundColor(MilliColors.electricCyan)
             }
-            .scaleEffect(isPressed ? 0.9 : 1.0)
-            .shadow(color: MilliColors.electricCyan.opacity(0.3), radius: 10, x: 0, y: 0)
+            .scaleEffect(isPressed ? 0.85 : 1.0)
+            .shadow(color: MilliColors.electricCyan.opacity(0.4), radius: 15, x: 0, y: 5)
         }
+        .buttonStyle(PlainButtonStyle())
     }
 }

@@ -12,16 +12,18 @@ struct ConnectBankView: View {
                 .foregroundColor(MilliColors.electricCyan)
             
             Text("Connect Your Bank")
-                .font(.title2.bold())
+                .font(.system(size: 24, weight: .black, design: .monospaced))
+                .foregroundColor(.white)
             
             Text("Securely link your accounts to track payouts and tax savings automatically.")
+                .font(.system(.body, design: .monospaced))
                 .multilineTextAlignment(.center)
                 .foregroundColor(.gray)
                 .padding(.horizontal)
             
-            Button(action: { /* Trigger Plaid Link */ }) {
-                Text("Link Account")
-                    .font(.headline)
+            Button(action: { plaidManager.presentPlaidLink() }) {
+                Text("LINK ACCOUNT")
+                    .font(.system(size: 12, weight: .black, design: .monospaced))
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(MilliColors.electricCyan)
@@ -31,5 +33,6 @@ struct ConnectBankView: View {
             .padding(.horizontal)
         }
         .padding()
+        .background(MilliColors.obsidian.ignoresSafeArea())
     }
 }
