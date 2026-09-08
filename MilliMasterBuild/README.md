@@ -2,7 +2,7 @@ markdown
 # Milli Master Build
 
 ## Product Overview
-Milli is a high-precision financial management platform for independent earners.
+Milli is a high-precision financial management platform for independent earners, providing real-time visibility into payouts, tax obligations, and wealth growth.
 
 ## Canonical Navigation
 - Payouts (Wallet)
@@ -17,11 +17,12 @@ Milli is a high-precision financial management platform for independent earners.
 - Combine
 
 ## Architecture
-MVVM (Model-View-ViewModel) with centralized design tokens.
+MVVM (Model-View-ViewModel) with centralized design tokens and reactive state management.
 
 ## Financial Truth Rules
 - All values must be backed by real state or explicitly marked as DEMO.
 - No hard-coded financial values in production code.
+- Allocations (Tax, Retirement, Investing, Savings) must be reconciled against Gross Payouts.
 
 ## Design System
 - Typography: Sora (Displays/Numbers), Inter (Body/Metadata).
@@ -30,11 +31,11 @@ MVVM (Model-View-ViewModel) with centralized design tokens.
 ## Environment Setup
 - Xcode 16+
 - iOS 17+
-- Plaid API integration required for live data.
+- Plaid API integration required for live financial data.
 
 ## Build Instructions
 1. Open `MilliMasterBuild.xcodeproj` in Xcode 16+.
-2. Ensure all dependencies are resolved.
+2. Ensure all SwiftData dependencies are resolved.
 3. Run on iOS 17+ Simulator.
 
 ## Test Instructions
@@ -47,4 +48,4 @@ MVVM (Model-View-ViewModel) with centralized design tokens.
 ## Definition of Done
 - Navigation visually matches hardware reference.
 - Home dashboard sections are fully implemented with real state.
-- Unit tests pass for all financial calculations.
+- Unit tests pass for all financial calculations, including allocation reconciliation and tax vault progress.

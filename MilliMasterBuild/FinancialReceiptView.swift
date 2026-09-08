@@ -6,7 +6,6 @@ struct FinancialReceiptView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 24) {
-                // Header
                 VStack(spacing: 8) {
                     Text(payout.sourcePlatform.uppercased())
                         .font(MilliFont.inter(size: 10, weight: .bold))
@@ -17,27 +16,26 @@ struct FinancialReceiptView: View {
                 }
                 .padding(.top, 20)
                 
-                // Breakdown
                 VStack(spacing: 16) {
                     receiptRow(label: "Gross Payout", value: payout.amount)
-                    receiptRow(label: "Taxes", value: -payout.taxWithheld, color: MilliColors.error)
-                    receiptRow(label: "Retirement", value: 0.0)
-                    receiptRow(label: "Investing", value: 0.0)
-                    receiptRow(label: "Savings", value: 0.0)
+                    receiptRow(label: "Taxes", value: payout.taxWithheld, color: MilliColors.error)
+                    receiptRow(label: "Retirement", value: payout.retirementAllocation)
+                    receiptRow(label: "Investing", value: payout.investingAllocation)
+                    receiptRow(label: "Savings", value: payout.savingsAllocation)
                     
                     Divider().background(MilliColors.glass)
                     
-                    receiptRow(label: "Available", value: payout.amount - payout.taxWithheld, isTotal: true)
+                    receiptRow(label: "Available", value: payout.availableToSpend, isTotal: true)
                 }
                 .padding(24)
                 .background(MilliColors.carbon)
                 .cornerRadius(MilliTokens.radius)
                 
-                // Metadata
                 VStack(alignment: .leading, spacing: 12) {
                     metaRow(label: "Receipt ID", value: payout.id.uuidString.prefix(8).uppercased())
                     metaRow(label: "Date", value: payout.date.formatted(date: .abbreviated, time: .shortened))
                     metaRow(label: "Status", value: payout.status.uppercased())
+                    metaRow(label: "Provenance", value: payout.provenance.uppercased())
                 }
                 .padding(24)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -49,13 +47,19 @@ struct FinancialReceiptView: View {
         .background(MilliColors.obsidian.ignoresSafeArea())
     }
     
-    private func receiptRow(label: String, value: Double, color: Color = .white, isTotal: Bool = false) -> some View {
+    private func receiptRow(label: String, value: Double?, color: Color = .white, isTotal: Bool = false) -> some View {
         HStack {
             Text(label).font(MilliFont.inter(size: 14, weight: isTotal ? .bold : .regular))
             Spacer()
-            Text(value, format: .currency(code: "USD"))
-                .font(MilliFont.sora(size: 14, weight: isTotal ? .black : .medium))
-                .foregroundColor(color)
+            if let val = value {
+                Text(val, format: .currency(code: "USD"))
+                    .font(MilliFont.sora(size: 14, weight: isTotal ? .black : .medium))
+                    .foregroundColor(isTotal ? .white : color)
+            } else {
+                Text("UNAVAILABLE")
+                    .font(MilliFont.inter(size: 10, weight: .bold))
+                    .foregroundColor(.gray)
+            }
         }
     }
     

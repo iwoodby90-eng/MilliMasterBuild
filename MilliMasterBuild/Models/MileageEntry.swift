@@ -7,11 +7,13 @@ final class MileageEntry {
     var distance: Double
     var date: Date
     var purpose: String
+    var category: String // "business" or "personal"
     
-    init(distance: Double, date: Date, purpose: String) {
+    init(distance: Double, date: Date, purpose: String, category: String = "business") {
         self.id = UUID()
         self.distance = distance
         self.date = date
         self.purpose = purpose
+        self.category = category
     }
 }

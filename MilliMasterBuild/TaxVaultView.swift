@@ -3,10 +3,20 @@ import SwiftData
 
 struct TaxVaultView: View {
     @Query(sort: \TaxVault.date, order: .reverse) private var ledger: [TaxVault]
-    @State private var showAddFunds = false
+    
+    // Configuration
+    private let annualTarget: Double = 12000.0 
     
     var settledBalance: Double {
         ledger.filter { $0.status == "settled" }.reduce(0) { $0 + $1.amount }
+    }
+    
+    var processingAmount: Double {
+        ledger.filter { $0.status == "processing" }.reduce(0) { $0 + $1.amount }
+    }
+    
+    var progress: Double {
+        annualTarget > 0 ? min(settledBalance / annualTarget, 1.0) : 0
     }
     
     var body: some View {
@@ -18,17 +28,23 @@ struct TaxVaultView: View {
                     Text(settledBalance, format: .currency(code: "USD"))
                         .font(MilliFont.sora(size: 44, weight: .black))
                         .monospacedDigit()
+                    
+                    if processingAmount > 0 {
+                        Text("+\(processingAmount.formatted(.currency(code: "USD"))) processing")
+                            .font(MilliFont.inter(size: 12, weight: .medium))
+                            .foregroundColor(MilliColors.electricCyan)
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
-                // Progress Card
+                // Progress
                 VStack(alignment: .leading, spacing: 16) {
                     HStack {
                         Text("ANNUAL TARGET").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
                         Spacer()
-                        Text("64%").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(MilliColors.electricCyan)
+                        Text("\(Int(progress * 100))%").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(MilliColors.electricCyan)
                     }
-                    ProgressView(value: 0.64)
+                    ProgressView(value: progress)
                         .tint(MilliColors.electricCyan)
                 }
                 .padding(24)
@@ -38,19 +54,23 @@ struct TaxVaultView: View {
                 // Ledger
                 VStack(alignment: .leading, spacing: 16) {
                     Text("LEDGER").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
-                    ForEach(ledger) { entry in
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Text(entry.name).font(MilliFont.inter(size: 14, weight: .medium))
-                                Text(entry.date, style: .date).font(MilliFont.inter(size: 10)).foregroundColor(.gray)
-                            }
-                            Spacer()
-                            VStack(alignment: .trailing) {
-                                Text(entry.amount, format: .currency(code: "USD")).font(MilliFont.sora(size: 14, weight: .bold))
-                                MilliStatusBadge(status: entry.status)
+                    
+                    if ledger.isEmpty {
+                        Text("No vault activity").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
+                    } else {
+                        ForEach(ledger) { entry in
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(entry.name).font(MilliFont.inter(size: 14, weight: .medium))
+                                    Text(entry.date, style: .date).font(MilliFont.inter(size: 10)).foregroundColor(.gray)
+                                }
+                                Spacer()
+                                VStack(alignment: .trailing) {
+                                    Text(entry.amount, format: .currency(code: "USD")).font(MilliFont.sora(size: 14, weight: .bold))
+                                    MilliStatusBadge(status: entry.status)
+                                }
                             }
                         }
-                        .padding(.vertical, 8)
                     }
                 }
                 .padding(24)

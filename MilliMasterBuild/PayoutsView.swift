@@ -3,15 +3,13 @@ import SwiftData
 
 struct PayoutsView: View {
     @Query(sort: \Payout.date, order: .reverse) private var payouts: [Payout]
-    @State private var selectedFilter: String = "All"
     
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                // Summary Header
                 HStack(spacing: 20) {
-                    summaryItem(title: "TOTAL", value: "$12,450")
-                    summaryItem(title: "PENDING", value: "$420")
+                    summaryItem(title: "TOTAL", value: payouts.reduce(0) { $0 + $1.amount }.formatted(.currency(code: "USD")))
+                    summaryItem(title: "PENDING", value: payouts.filter { $0.status == "pending" }.reduce(0) { $0 + $1.amount }.formatted(.currency(code: "USD")))
                 }
                 .padding(24)
                 .background(MilliColors.carbon)

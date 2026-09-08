@@ -4,6 +4,7 @@ import SwiftData
 struct HomeDashboardView: View {
     @Query(sort: \Payout.date, order: .reverse) private var payouts: [Payout]
     @Query(sort: \TaxVault.date, order: .reverse) private var taxVaults: [TaxVault]
+    @Query private var mileageEntries: [MileageEntry]
     @StateObject private var viewModel = MilliViewModel()
     
     var body: some View {
@@ -25,6 +26,7 @@ struct HomeDashboardView: View {
             .padding(.bottom, 100)
         }
         .background(MilliColors.obsidian.ignoresSafeArea())
+        .onAppear { viewModel.updateBalance(from: payouts) }
     }
     
     private var header: some View {
@@ -67,28 +69,29 @@ struct HomeDashboardView: View {
     private var taxReadyScoreSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("TAX READY SCORE™").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
-            MilliMetricCard(title: "COMPLIANCE INDEX", value: "98.2", status: "OPTIMAL")
+            MilliMetricCard(title: "COMPLIANCE INDEX", value: "N/A", status: "UNAVAILABLE")
         }
     }
     
     private var financialTimelineSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("FINANCIAL TIMELINE").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
-            Text("All systems nominal").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
+            Text("Data syncing...").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
         }
     }
     
     private var mileageSnapshotSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("MILEAGE SNAPSHOT").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
-            MilliMetricCard(title: "TOTAL MILES", value: "1,240 mi", status: "TRACKING")
+            let totalMiles = mileageEntries.reduce(0) { $0 + $1.distance }
+            MilliMetricCard(title: "TOTAL MILES", value: "\(Int(totalMiles)) mi", status: "TRACKING")
         }
     }
     
     private var retirementSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("RETIREMENT").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
-            Text("Projected: $0.00 (Demo)").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
+            Text("Account not linked").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
         }
     }
     
@@ -109,7 +112,7 @@ struct HomeDashboardView: View {
     private var milliAIInsightSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("MILLI AI INSIGHT").font(MilliFont.inter(size: 10, weight: .bold)).foregroundColor(.gray)
-            Text("Scanning financial vitals...").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
+            Text("Awaiting data...").font(MilliFont.inter(size: 12)).foregroundColor(.gray)
         }
     }
 }
