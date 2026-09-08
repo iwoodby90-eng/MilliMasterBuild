@@ -10,11 +10,11 @@ struct ContentView: View {
             if securityManager.isAuthenticated {
                 VStack(spacing: 0) {
                     TabView(selection: $selectedTab) {
-                        Color.clear.tag(0)
+                        PayoutsView().tag(0)
                         MileageView().tag(1)
                         HomeDashboardView().tag(2)
                         WealthView().tag(3)
-                        NavigationView { MilliSettingsView() }.tag(4)
+                        MilliSettingsView().tag(4)
                     }
                     
                     MilliNavBar(selectedTab: $selectedTab) {

@@ -4,34 +4,46 @@ struct MilliSettingsView: View {
     @EnvironmentObject var securityManager: SecurityManager
     
     var body: some View {
-        List {
-            Section(header: Text("Gadget Configuration").foregroundColor(MilliColors.electricCyan)) {
-                Toggle("Enable Voice Feedback", isOn: .constant(true))
-                Toggle("Auto-Log Mileage", isOn: .constant(true))
-                NavigationLink("Security & Privacy", destination: SecuritySettingsView())
-            }
-            
-            Section(header: Text("Account")) {
-                Button("Sync Tree of Life Data") { }
-                Button("Reset AI Personality", role: .destructive) { }
-                Button("Lock App", role: .destructive) {
-                    securityManager.lock()
+        NavigationStack {
+            List {
+                Section("Account") {
+                    SettingsRow(icon: "person.fill", title: "Profile", color: .white)
+                    SettingsRow(icon: "shield.fill", title: "Security", color: MilliColors.electricCyan)
+                }
+                
+                Section("Data") {
+                    SettingsRow(icon: "arrow.triangle.2.circlepath", title: "Sync Plaid Data", color: .green)
+                    SettingsRow(icon: "trash.fill", title: "Clear Cache", color: .red)
+                }
+                
+                Section {
+                    Button("Lock App") {
+                        securityManager.lock()
+                    }
+                    .foregroundColor(.red)
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(MilliColors.obsidian)
+            .navigationTitle("Settings")
+            .toolbarColorScheme(.dark, for: .navigationBar)
         }
-        .scrollContentBackground(.hidden)
-        .background(MilliColors.obsidian)
-        .navigationTitle("Settings")
     }
 }
 
-struct SecuritySettingsView: View {
+struct SettingsRow: View {
+    let icon: String
+    let title: String
+    let color: Color
+    
     var body: some View {
-        Form {
-            Section("Authentication") {
-                Text("Biometric Lock is currently active.")
-            }
+        HStack(spacing: 16) {
+            Image(systemName: icon)
+                .foregroundColor(color)
+                .frame(width: 30)
+            Text(title)
+                .font(.body.medium())
         }
-        .navigationTitle("Security")
+        .listRowBackground(MilliColors.carbon)
     }
 }
